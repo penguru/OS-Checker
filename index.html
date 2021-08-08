@@ -10,15 +10,36 @@
 
 <script>
         window.onload = function exampleFunction() {
-        	location.replace("https://play.google.com/store/apps/details?id=com.mobsmile.hive")
 
+        	var userAgent = window.navigator.userAgent,
+      		platform = window.navigator.platform,
+      		macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      		windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      		iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      		os = null;
+
+  			if (macosPlatforms.indexOf(platform) !== -1) {
+    			location.replace("https://apps.apple.com/tr/app/id1571895372");
+			  } else if (iosPlatforms.indexOf(platform) !== -1) {
+			    location.replace("https://apps.apple.com/tr/app/id1571895372");
+			  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+			    location.replace("https://play.google.com/store/apps/details?id=com.mobsmile.hive");
+			  } else if (/Android/.test(userAgent)) {
+			    location.replace("https://play.google.com/store/apps/details?id=com.mobsmile.hive");
+			  } else if (!os && /Linux/.test(platform)) {
+			    location.replace("https://play.google.com/store/apps/details?id=com.mobsmile.hive");
+			  }
+			}
+
+  			/*
         	if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
-            	location.replace("http://play.google.com/store/apps/details?id=com.truecaller&hl=en");
+            	location.replace("https://play.google.com/store/apps/details?id=com.mobsmile.hive");
         	}
         	if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
-            	location.replace("http://play.google.com/store/apps/details?id=com.truecaller&hl=en");
+            	location.replace("https://apps.apple.com/tr/app/facebook/id1571895372#?platform=iphone");
         	}
         }
+        */
 </script>
 
 </body>
