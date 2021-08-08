@@ -2,29 +2,17 @@
 <html>
 <body>
 
-<h2>JavaScript Functions2</h2>
+<h2>Redirect to a Webpage</h2>
+<p>The replace() method replaces the current document with a new one:</p>
 
-<p id="demo"></p>
-
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<button onclick="myFunction()">Replace document</button>
 
 <script>
-    $(document).ready(function (){
-
-    	window.location.replace("https://apps.apple.com/lb/app/truecaller-caller-id-number/id448142450");
-    	
-    	/*
-        if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
-            window.location.href = 'http://play.google.com/store/apps/details?id=com.truecaller&hl=en';
-        }
-        if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
-            window.location.href = 'http://itunes.apple.com/lb/app/truecaller-caller-id-number/id448142450?mt=8';
-        }
-        */
-    });
+function myFunction() {
+  location.replace("https://www.w3schools.com")
+}
 </script>
 
 </body>
-</html>
-
+</html> 
 
